@@ -1,0 +1,80 @@
+<p id="notice"><%= notice %></p>
+
+ <h1> <%= @smoothie.name %> </h1>
+
+<p>
+  <b>Ingredients:</b>
+  <ul>
+  <% @smoothie.ingredients.each do |ingr|%>
+  <li><%=link_to ingr.name, ingr%></li>
+  <%end%>
+  </ul>
+</p>
+<p>
+  <b>Recipe:</b>
+  <pre><%= @smoothie.desc %></pre>
+</p>
+
+<p>
+  <b>Image:</b>
+ <%=link_to  "link", @smoothie.url %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @smoothie.user.username %>
+</p>
+
+<p>
+  <b>Rating:</b>
+  <%= @smoothie.rating %>
+</p>
+<%if current_user == nil%>
+    <i>login to comment this smoothie</i>
+
+<%else%>
+    <%= form_for(@comment) do |f| %>
+        <% if @comment.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+              <ul>
+                <% @comment.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+              </ul>
+            </div>
+        <% end %>
+
+        <div class="field">
+          <%= f.label :comment %><br />
+          <%= f.text_area :comment %>
+        </div>
+
+        <div class="field">
+          <%= f.label :rating, "Rating 1-10" %><br />
+          <%= f.number_field :rating %>
+        </div>
+        <%=f.hidden_field :smoothie_id, :value => @smoothie.id %>
+
+        <div class="actions">
+          <%= f.submit %>
+        </div>
+    <% end %>
+<%end%>
+
+<% @smoothie.comments.each do |comment|%>
+    <div class="comment">
+        <b><%=comment.user.username%> | Rating: <%=comment.rating%>| <%=comment.created_at%></b><br/>
+        <%=comment.comment%>
+    </div>
+<%end%>
+
+<%if @smoothie.comments.size > 0%>
+<%end%>
+<% if current_user == @smoothie.user %>
+    <%= link_to 'Destroy', smoothie_path(@smoothie), :method =>:delete, :confirm => "Are you sure?" %> |
+
+    <%= link_to 'Edit', edit_smoothie_path(@smoothie) %> |
+<%end%>
+<%= link_to 'Back', smoothies_path %>

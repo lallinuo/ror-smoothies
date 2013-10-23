@@ -1,0 +1,12 @@
+<h1>Smoothies!</h1>
+
+
+<% @smoothies.each do |smoothie| %>
+
+   <%= link_to smoothie.name, smoothie%> </br>
+<% end %>
+
+<br />
+<%if current_user != nil %>
+<%= link_to 'New Smoothie', new_smoothie_path %>
+<%end%>

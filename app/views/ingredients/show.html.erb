@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @ingredient.name %>
+</p>
+
+<p>
+  <b>Availability:</b>
+  <%= @ingredient.availability %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @ingredient.price %>
+</p>
+<b>Used in: </b>
+<ul>
+<% @ingredient.smoothies.each do |ingredient| %>
+    <li><%=link_to ingredient.name, ingredient %></li>
+<% end %>
+  </ul>
+
+<%= link_to 'Destroy', @ingredient, :method => :delete %> |
+<%= link_to 'Edit', edit_ingredient_path(@ingredient) %> |
+<%= link_to 'Back', ingredients_path %>
