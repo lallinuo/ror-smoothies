@@ -8,19 +8,32 @@
 </head>
 <body>
 <div id="nav">
-  <%= link_to "Smoothies", smoothies_path %>
-  <%= link_to "Users", users_path %>
-  <%= link_to "Ingredients", ingredients_path %>
+  <div id="navleft">
+      <h1>RoR-Smoothies</h1>
+      <%= link_to "Smoothies", smoothies_path %> |
+      <%= link_to "Users", users_path %> |
+      <%= link_to "Ingredients", ingredients_path%> |
+    <%= link_to "Register", new_user_path %>
+  </div>
+  <div id="navright">
 
   <% if current_user.nil? %>
-      <%= link_to "Log in", signin_path %>
-      <%= link_to "Register", new_user_path %>
+
+      <p id="notice"><%= notice %></p>
+
+        <%= form_tag sessions_path do %>
+
+
+            username <%= text_field_tag :username, params[:username] %>
+          password <%= password_field_tag :password, params[:password] %>
+          <%= submit_tag "Log in" %>
+
+      <% end %>
       <%else%>
       <%= link_to "Log out", signout_path, :method => :delete %>
 
-
-
-<%end%>
+    <%end%>
+      </div>
 
 
 </div>

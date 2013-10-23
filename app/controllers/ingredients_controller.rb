@@ -47,10 +47,12 @@ class IngredientsController < ApplicationController
   def create
     @ingredient = Ingredient.new(params[:ingredient])
     respond_to do |format|
-      if @ingredient.save
+      if (@ingredient.save if current_user != nil)
         format.html { redirect_to @ingredient, notice: 'Ingredient was successfully created.' }
         format.json { render json: @ingredient, status: :created, location: @ingredient }
       else
+        @prices = ["Very cheap","Cheap","Expensive", "Very expensive"]
+
         format.html { render action: "new" }
         format.json { render json: @ingredient.errors, status: :unprocessable_entity }
       end

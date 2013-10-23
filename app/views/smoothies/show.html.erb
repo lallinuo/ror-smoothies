@@ -22,7 +22,7 @@
 
 <p>
   <b>User:</b>
-  <%= @smoothie.user.username %>
+  <%= link_to @smoothie.user.username, @smoothie.user%>
 </p>
 
 <p>
@@ -30,7 +30,7 @@
   <%= @smoothie.rating %>
 </p>
 <%if current_user == nil%>
-    <i>login to comment this smoothie</i>
+    <i><%=link_to "log in", signin_path%> to comment this smoothie</i>
 
 <%else%>
     <%= form_for(@comment) do |f| %>
