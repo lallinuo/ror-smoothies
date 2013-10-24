@@ -3,7 +3,9 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.14'
 gem 'execjs'
 gem 'bcrypt-ruby', '~> 3.0.0'
-
+group :development, :test do
+      gem 'rspec-rails', '~> 2.0'
+end
 gem 'therubyracer'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
