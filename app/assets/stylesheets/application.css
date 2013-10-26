@@ -19,6 +19,23 @@ body{
    margin: 0px;
 }
 
+#prv-image{
+    border-radius: 3px 3px 3px 3px;
+    max-width: 200px;
+    min-width: 200px;
+    float: right;
+}
+#smoothie{
+    max-width: 600px;
+    min-width: 600px;
+    float:left;
+}
+
+#smoothie-container  {
+    overflow: auto;
+    max-width: 800px;
+    margin-bottom: 80px;
+}
 ul{
     list-style-type: none;
     margin: 0px;

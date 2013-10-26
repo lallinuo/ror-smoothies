@@ -1,34 +1,39 @@
-<p id="notice"><%= notice %></p>
+<div id="smoothie-container">
+    <img id="prv-image" src=""/>
+    <div id="smoothie">
+        <p id="notice"><%= notice %></p>
 
- <h1> <%= @smoothie.name %> </h1>
+         <h1> <%= @smoothie.name %> </h1>
 
-<p>
-  <b>Ingredients:</b>
-  <ul>
-  <% @smoothie.ingredients.each do |ingr|%>
-  <li><%=link_to ingr.name, ingr%></li>
-  <%end%>
-  </ul>
-</p>
-<p>
-  <b>Recipe:</b>
-  <pre><%= @smoothie.desc %></pre>
-</p>
+        <p>
+          <b>Ingredients:</b>
+          <ul>
+          <% @smoothie.ingredients.each do |ingr|%>
+          <li><%=link_to ingr.name, ingr%></li>
+          <%end%>
+          </ul>
+        </p>
+        <p>
+          <b>Recipe:</b>
+          <pre><%= @smoothie.desc %></pre>
+        </p>
 
-<p>
-  <b>Image:</b>
- <%=link_to  "link", @smoothie.url %>
-</p>
+        <p>
+          <b>Image:</b>
+         <%=link_to  "link", @smoothie.url, {"id"=>"imgurlink"} %>
+        </p>
 
-<p>
-  <b>User:</b>
-  <%= link_to @smoothie.user.username, @smoothie.user%>
-</p>
+        <p>
+          <b>User:</b>
+          <%= link_to @smoothie.user.username, @smoothie.user%>
+        </p>
 
-<p>
-  <b>Rating:</b>
-  <%= @smoothie.rating %>
-</p>
+        <p>
+          <b>Rating:</b>
+          <%= @smoothie.rating %>
+        </p>
+    </div>
+</div>
 <%if current_user == nil%>
     <i><%=link_to "log in", signin_path%> to comment this smoothie</i>
 
