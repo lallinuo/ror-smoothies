@@ -15,6 +15,7 @@ group :test do
         gem 'launchy'
 end
 gem 'sqlite3'
+gem 'knockoutjs-rails'
 
 
 # Gems used only for assets and not required

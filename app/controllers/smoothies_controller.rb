@@ -6,7 +6,10 @@ class SmoothiesController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @smoothies }
+      format.json do
+        render :json => @smoothies.to_json(:include => { :ingredients => { :only => :name } })
+      end
+
     end
   end
 

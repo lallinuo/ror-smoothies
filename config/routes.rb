@@ -1,12 +1,9 @@
 Rorsmoothies::Application.routes.draw do
   resources :recipes
-
-
   resources :ingredients
-
-
   resources :smoothies
-
+  get "search", to: "search#index"
+  resources :search, :only => [:index]
   resources :comments
   resources :sessions, :only => [:new, :create, :destroy]
 

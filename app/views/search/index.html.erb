@@ -1,0 +1,16 @@
+
+<b>Only show smoothies that include: </b>
+<ul>
+    <form id="ingredients" data-bind="foreach: allIngredients">
+        <li><input type="checkbox" data-bind="attr: {name: name}"/><span data-bind="text: name"></span></li>
+    </form>
+</ul>
+<br/>
+
+<b>Matching smoothies: </b>
+<br/>
+<ul data-bind="foreach: matchingSmoothies">
+
+  <li><a id="smoothLink" href="#" data-bind="text:name, attr: {link:id}"></a></li>
+</ul>
+
