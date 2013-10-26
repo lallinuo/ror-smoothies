@@ -9,7 +9,11 @@ end
 gem 'therubyracer'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
+group :test do
+        gem 'factory_girl_rails'
+        gem 'capybara'
+        gem 'launchy'
+end
 gem 'sqlite3'
 
 

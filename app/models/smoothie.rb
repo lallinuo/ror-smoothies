@@ -1,5 +1,5 @@
 class Smoothie < ActiveRecord::Base
-  attr_accessible :desc, :rating, :url, :user_id, :name
+  attr_accessible :desc, :rating, :url, :user_id, :name, :user
   has_many :comments, :dependent => :destroy
   has_many :recipes, :dependent => :destroy
 
