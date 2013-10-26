@@ -44,6 +44,8 @@ ul{
 }
 
 pre{
+    white-space: normal;
+    word-wrap: break-word;
     font-family: Georgia;
     font-size: 14px !important;
     background-color:white !important;

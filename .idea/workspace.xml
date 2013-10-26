@@ -13,7 +13,7 @@
     <file path="/smoothies_controller.rb" changelist="5bf371ce-e98d-4f3e-8e35-7dbe5e8d49dc" time="1382818380020" ignored="false" />
     <file path="/application.html.erb" changelist="5bf371ce-e98d-4f3e-8e35-7dbe5e8d49dc" time="1382824687849" ignored="false" />
     <file path="/_form.html.erb" changelist="5bf371ce-e98d-4f3e-8e35-7dbe5e8d49dc" time="1382524693079" ignored="false" />
-    <file path="/show.html.erb" changelist="5bf371ce-e98d-4f3e-8e35-7dbe5e8d49dc" time="1382828766351" ignored="false" />
+    <file path="/show.html.erb" changelist="5bf371ce-e98d-4f3e-8e35-7dbe5e8d49dc" time="1382829433746" ignored="false" />
     <file path="/comments_controller.rb" changelist="5bf371ce-e98d-4f3e-8e35-7dbe5e8d49dc" time="1382362144194" ignored="false" />
     <file path="/20131021111659_add_smoothie_id_to_comment.rb" changelist="5bf371ce-e98d-4f3e-8e35-7dbe5e8d49dc" time="1382354295740" ignored="false" />
     <file path="/20131021111940_add_smoothie_idto_comment.rb" changelist="5bf371ce-e98d-4f3e-8e35-7dbe5e8d49dc" time="1382354442468" ignored="false" />
@@ -28,7 +28,7 @@
     <file path="/recipe.rb" changelist="5bf371ce-e98d-4f3e-8e35-7dbe5e8d49dc" time="1382434437799" ignored="false" />
     <file path="/ingredients_controller.rb" changelist="5bf371ce-e98d-4f3e-8e35-7dbe5e8d49dc" time="1382563197371" ignored="false" />
     <file path="/20131022092749_add_columns_to_recipe.rb" changelist="5bf371ce-e98d-4f3e-8e35-7dbe5e8d49dc" time="1382434124819" ignored="false" />
-    <file path="/application.css" changelist="5bf371ce-e98d-4f3e-8e35-7dbe5e8d49dc" time="1382828461130" ignored="false" />
+    <file path="/application.css" changelist="5bf371ce-e98d-4f3e-8e35-7dbe5e8d49dc" time="1382829365687" ignored="false" />
     <file path="/comment_spec.rb" changelist="5bf371ce-e98d-4f3e-8e35-7dbe5e8d49dc" time="1382806709795" ignored="false" />
     <file path="/smoothies_page_spec.rb" changelist="5bf371ce-e98d-4f3e-8e35-7dbe5e8d49dc" time="1382807218174" ignored="false" />
     <file path="/users_page_spec.rb" changelist="5bf371ce-e98d-4f3e-8e35-7dbe5e8d49dc" time="1382823396244" ignored="false" />
@@ -60,7 +60,7 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/smoothies/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="48" selection-start="554" selection-end="554" vertical-scroll-proportion="-13.75">
+            <state line="17" column="27" selection-start="440" selection-end="440" vertical-scroll-proportion="-10.625">
               <folding />
             </state>
           </provider>
@@ -75,19 +75,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show_smoothie.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="show_smoothie.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/show_smoothie.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="93" selection-end="93" vertical-scroll-proportion="0.07867133">
+            <state line="3" column="0" selection-start="93" selection-end="93" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="application.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="20" selection-start="632" selection-end="632" vertical-scroll-proportion="0.0">
+            <state line="47" column="26" selection-start="1004" selection-end="1004" vertical-scroll-proportion="0.8916084">
               <folding />
             </state>
           </provider>
@@ -116,9 +116,9 @@
         <option value="$PROJECT_DIR$/spec/features/signin_spec.rb" />
         <option value="$PROJECT_DIR$/app/views/users/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-        <option value="$PROJECT_DIR$/app/views/smoothies/show.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/show_smoothie.js" />
+        <option value="$PROJECT_DIR$/app/views/smoothies/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
       </list>
     </option>
   </component>
@@ -719,19 +719,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="20" selection-start="632" selection-end="632" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="28" selection-start="690" selection-end="690" vertical-scroll-proportion="0.41958043">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/show_smoothie.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="93" selection-end="93" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/smoothies/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="27" selection-start="440" selection-end="440" vertical-scroll-proportion="-10.625">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -742,16 +749,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/smoothies/show.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="48" selection-start="554" selection-end="554" vertical-scroll-proportion="-13.75">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/show_smoothie.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="93" selection-end="93" vertical-scroll-proportion="0.07867133">
+        <state line="47" column="26" selection-start="1004" selection-end="1004" vertical-scroll-proportion="0.8916084">
           <folding />
         </state>
       </provider>
