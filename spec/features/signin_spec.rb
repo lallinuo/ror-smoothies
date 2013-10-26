@@ -8,7 +8,6 @@ describe "Signin " do
         fill_in("username", :with =>"testi")
         fill_in("password", :with =>"salasana")
         click_button "Log in"
-        save_and_open_page
         expect(page).to have_content "Welcome"
       end
 

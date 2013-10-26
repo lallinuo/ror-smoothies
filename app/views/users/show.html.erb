@@ -1,10 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Username:</b>
+<h1>
   <%= @user.username %>
-</p>
-<b> Smoothies by <%=@user.username%>:</b>
+</h1>
+<b> Smoothies by <%=@user.username%> total (<%=@user.smoothies.count%>):</b>
 <ul>
 <% @user.smoothies.each do |smoothie| %>
  <li><%= link_to smoothie.name, smoothie %></li>

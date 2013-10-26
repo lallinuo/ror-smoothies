@@ -14,7 +14,14 @@ group :test do
         gem 'capybara'
         gem 'launchy'
 end
-gem 'sqlite3'
+group :development, :test do
+      gem 'sqlite3'
+end
+
+group :production do
+       gem 'pg'
+          gem 'rails_stdout_logging' 
+end
 gem 'knockoutjs-rails'
 
 

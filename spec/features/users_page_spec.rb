@@ -14,8 +14,13 @@ describe "User page" do
   it "contains link to users smoothies" do
     visit users_path
     click_link "Pekka"
-    expect(@smoothie).to be_valid
     expect(page).to have_content "asd"
+  end
+
+  it "contains number of added smoothies" do
+    visit users_path
+    click_link "Pekka"
+    expect(page).to have_content ("total (1)")
   end
 
 end
