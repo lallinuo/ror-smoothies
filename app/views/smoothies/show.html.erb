@@ -15,7 +15,8 @@
         </p>
         <p>
           <b>Recipe:</b>
-          <pre width="500px"><%= @smoothie.desc %></pre>
+          <%= simple_format(@smoothie.desc,{"id"=>"recipe-text"}) %>
+
         </p>
 
         <p>

@@ -3,7 +3,7 @@
 
 <% @smoothies.each do |smoothie| %>
 
-   <%= link_to smoothie.name, smoothie%> </br>
+   <%= link_to truncate(smoothie.name,length:40), smoothie%> </br>
 <% end %>
 
 <br />

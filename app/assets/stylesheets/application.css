@@ -43,12 +43,13 @@ ul{
 
 }
 
-pre{
-    white-space: normal;
-    word-wrap: break-word;
-    font-family: Georgia;
-    font-size: 14px !important;
-    background-color:white !important;
+#recipe-text{
+    margin: 8px;
+    -moz-hyphens:auto;
+    -ms-hyphens:auto;
+    -webkit-hyphens:auto;
+    hyphens:auto;
+    word-wrap:break-word;
 }
 #nav {
 
