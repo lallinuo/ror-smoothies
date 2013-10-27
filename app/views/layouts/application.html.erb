@@ -26,7 +26,7 @@
 
 
         <%= form_tag sessions_path do %>
-            <span id="notice"><%= notice %></span>
+            <span class="login-error"><%= notice %></span>
 
 
             username <%= text_field_tag :username, params[:username] %>

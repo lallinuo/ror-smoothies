@@ -42,6 +42,9 @@ ul{
     padding: 0px;
 
 }
+.login-error{
+    color:red;
+}
 
 #recipe-text{
     margin: 8px;

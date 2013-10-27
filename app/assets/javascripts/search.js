@@ -12,6 +12,7 @@ $(document).ready(function(){
         this.allIngredients = ko.observableArray([]);
         this.wantedIngredients = ko.observableArray([]);
 
+
     }
     function updateMatchingSmoothies(){
         matchingSmoothies = [];
@@ -25,7 +26,6 @@ $(document).ready(function(){
             })
             if(lisays){
                 matchingSmoothies.push(smoothie)
-                console.log(matchingSmoothies)
 
             }
 
@@ -33,7 +33,7 @@ $(document).ready(function(){
         });
         smoothiesModel.matchingSmoothies(matchingSmoothies)
     }
-
+    getSmoothies();
     function containsIngredient(list,ingredient){
         loytyy = false;
         $(list).each(function(){
@@ -45,10 +45,12 @@ $(document).ready(function(){
     }
     smoothiesModel = new smoothiesModel();
     ko.applyBindings(smoothiesModel);
-    $.get("/smoothies.json",function(data){
-        smoothiesModel.allSmoothies(data);
-
-    })
+    function getSmoothies(){
+        $.get("/smoothies.json",function(data){
+            smoothiesModel.allSmoothies(data);
+            smoothiesModel.matchingSmoothies(data);
+        })
+    }
 
     $.get("/ingredients.json",function(data){
         smoothiesModel.allIngredients(data);
