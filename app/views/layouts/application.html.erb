@@ -15,6 +15,10 @@
       <%= link_to "Users", users_path %> |
       <%= link_to "Ingredients", ingredients_path%> |
       <%= link_to "Search", search_path%>
+    <% if !current_user.nil?%>
+       | <%= link_to 'Post new smoothie', new_smoothie_path %> <br/> <br/>
+
+  <%end%>
     <% if current_user.nil? %>
 
    | <%= link_to "Register", new_user_path %>
